@@ -1,5 +1,5 @@
 export function join(arr, inputValue) {
-  const resultJoin = [];
+  let resultJoin = "";
   let newValue = "";
   for (let i = 0; i < arr.length; i++) {
     if (inputValue === "") {
@@ -12,6 +12,7 @@ export function join(arr, inputValue) {
 
     // console.log("newValue:", arr[i]);
   }
-  resultJoin.push(newValue);
+  resultJoin = newValue.slice(0, -1);
+  console.log("resultJoin:", resultJoin);
   return resultJoin;
 }
