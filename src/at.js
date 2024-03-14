@@ -1,5 +1,10 @@
 export function at(arr, indexValue) {
-  const resultAt = arr.filter((index) => index === indexValue);
-  const result = arr[resultAt];
-  return result;
+  let resultAt;
+  if (indexValue < 0) {
+    resultAt = arr[arr.length - indexValue * -1];
+  } else {
+    resultAt = arr[indexValue];
+  }
+
+  return resultAt;
 }
